@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from HappinessAPP.models import Members, Teams
+
+admin.site.register([Teams, Members])
