@@ -7,6 +7,9 @@ class Teams(models.Model):
     def __str__(self):
         return f'{self.team_name}'
 
+    class Meta:
+        verbose_name_plural = 'Teams'
+
 
 class Members(models.Model):
     name = models.CharField(max_length=30, blank=False)
@@ -15,3 +18,6 @@ class Members(models.Model):
 
     def __str__(self):
         return f'{self.name} {self.last_name}'
+
+    class Meta:
+        verbose_name_plural = 'Members'
