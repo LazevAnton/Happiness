@@ -5,7 +5,7 @@ class Teams(models.Model):
     team_name = models.CharField(max_length=50, blank=False)
 
     def __str__(self):
-        return f'{self.team_name}'
+        return self.team_name
 
     class Meta:
         verbose_name_plural = 'Teams'
