@@ -21,3 +21,24 @@ class Members(models.Model):
 
     class Meta:
         verbose_name_plural = 'Members'
+
+
+class HappinessLevel(models.Model):
+    CHOICES = (
+        (1, 'Joy'),
+        (2, 'Excitement'),
+        (3, 'Gratitude'),
+        (4, 'Pride'),
+        (5, 'Optimism'),
+        (6, 'Contentment'),
+        (7, 'Love')
+    )
+    level = models.IntegerField(choices=CHOICES)
+    member = models.ForeignKey(Members, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.get_level_display()
+
+    class Meta:
+        verbose_name_plural = 'HappinessLevel'
+
