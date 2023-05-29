@@ -1,5 +1,5 @@
 from django.contrib import admin
 
-from HappinessAPP.models import Members, Teams
+from HappinessAPP.models import Members, Teams, HappinessLevel
 
-admin.site.register([Teams, Members])
+admin.site.register([Teams, Members, HappinessLevel])
