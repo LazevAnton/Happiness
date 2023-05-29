@@ -14,7 +14,7 @@ class Teams(models.Model):
 class Members(models.Model):
     name = models.CharField(max_length=30, blank=False)
     last_name = models.CharField(max_length=30, blank=False)
-    team = models.ForeignKey(Teams, on_delete=models.CASCADE)
+    team = models.ForeignKey(Teams, on_delete=models.SET_NULL, blank=True, null=True)
 
     def __str__(self):
         return f'{self.name} {self.last_name}'
